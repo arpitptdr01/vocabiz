@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0b1020" />
+
+  <title>VocaBiz | AI Business Assistant</title>
+
+  <!-- Existing stylesheet -->
+  <link rel="stylesheet" href="/style.css" />
+</head>
+
+<body>
+  <div class="app">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <h2 class="brand">Voca<span>Biz</span></h2>
+      <p class="muted">BUSINESS COPILOT</p>
+
+      <nav>
+        <button class="nav active" id="overviewNav" type="button">
+          Overview
+        </button>
+
+        <button class="nav" id="salesNav" type="button">
+          Sales analytics
+        </button>
+
+        <button class="nav" id="productsNav" type="button">
+          Products
+        </button>
+      </nav>
+
+      <div class="side-note">Your business, your voice.</div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main>
+
+      <!-- HEADER -->
+      <header class="topbar">
+        <div>
+          <p class="muted">SELLER WORKSPACE</p>
+          <h1>Good business starts with clarity.</h1>
+        </div>
+
+        <span class="status">
+          <i></i> Demo data
+        </span>
+      </header>
+
+      <!-- HERO -->
+      <section class="hero">
+        <div>
+          <p class="eyebrow">YOUR AI BUSINESS ASSISTANT</p>
+
+          <h2>
+            Ask your business.<br />
+            <span>Get clarity.</span>
+          </h2>
+
+          <p>
+            Explore sales, orders, and product performance using
+            natural language.
+          </p>
+        </div>
+
+        <div class="orb" aria-hidden="true">V</div>
+      </section>
+
+      <!-- SALES ANALYTICS -->
+      <section class="panel analytics" id="analytics">
+        <p class="muted">SALES ANALYTICS</p>
+        <h2>Sales performance</h2>
+
+        <div class="filters">
+          <button class="filter active" data-period="7" type="button">
+            7 days
+          </button>
+
+          <button class="filter" data-period="30" type="button">
+            30 days
+          </button>
+
+          <button class="filter" data-period="90" type="button">
+            90 days
+          </button>
+        </div>
+
+        <div class="chart" id="salesChart"></div>
+
+        <p id="salesSummary">
+          Sample sales trend — illustrative data only.
+        </p>
+      </section>
+
+      <!-- METRICS -->
+      <section class="metrics">
+        <article class="metric">
+          <p>Total sales</p>
+          <h2 id="sales">₹1,24,500</h2>
+          <small>Sample business data</small>
+        </article>
+
+        <article class="metric">
+          <p>Orders</p>
+          <h2 id="orders">248</h2>
+          <small>Sample business data</small>
+        </article>
+
+        <article class="metric">
+          <p>Returns</p>
+          <h2 id="returns">12</h2>
+          <small>Sample business data</small>
+        </article>
+      </section>
+
+      <!-- PRODUCTS -->
+      <section class="panel products-section" id="products">
+        <p class="muted">PRODUCT PERFORMANCE</p>
+        <h2>Your products</h2>
+
+        <div class="product">
+          <span>Wireless Earbuds</span>
+          <b>₹42,000</b>
+        </div>
+
+        <div class="product">
+          <span>Smart Watch</span>
+          <b>₹35,500</b>
+        </div>
+
+        <div class="product">
+          <span>Phone Stand</span>
+          <b>₹18,000</b>
+        </div>
+
+        <p class="muted">
+          Illustrative product data, not live Amazon data.
+        </p>
+      </section>
+
+      <!-- WORKSPACE -->
+      <section class="workspace">
+
+        <!-- VOICE + CHAT PANEL -->
+        <div class="panel">
+          <div class="panel-heading">
+            <div>
+              <p class="muted">VOICE + CHAT</p>
+              <h2>Talk to VocaBiz</h2>
+            </div>
+
+            <span class="mic-icon">●</span>
+          </div>
+
+          <!-- CHAT MESSAGES -->
+          <div
+            class="chat"
+            id="chat"
+            aria-live="polite"
+            aria-label="VocaBiz conversation"
+          >
+            <div class="message bot">
+              Hi! Ask me about sales, orders, returns, or your
+              best-selling product.
+            </div>
+          </div>
+
+          <!-- QUESTION FORM -->
+          <form id="askForm">
+            <input
+              id="question"
+              type="text"
+              placeholder="Ask VocaBiz in any language..."
+              autocomplete="off"
+              aria-label="Your question"
+              required
+            />
+
+            <button class="send" type="submit">
+              Ask ↗
+            </button>
+          </form>
+
+          <!-- VOICE CONTROLS -->
+          <div class="voice-controls">
+
+            <button class="voice" id="voiceBtn" type="button">
+              🎙️ Speak your question
+            </button>
+
+            <button class="voice" id="stopSpeechBtn" type="button">
+              🔇 Stop Speaking
+            </button>
+
+          </div>
+
+          <p
+            class="muted tiny"
+            id="voiceStatus"
+            aria-live="polite"
+          >
+            Ready to help in your language.
+          </p>
+        </div>
+
+        <!-- BUSINESS SNAPSHOT -->
+        <div class="panel">
+          <p class="muted">BUSINESS SNAPSHOT</p>
+          <h2>Top products</h2>
+
+          <div class="product">
+            <span>Wireless Earbuds</span>
+            <b>₹42,000</b>
+          </div>
+
+          <div class="product">
+            <span>Smart Watch</span>
+            <b>₹35,500</b>
+          </div>
+
+          <div class="product">
+            <span>Phone Stand</span>
+            <b>₹18,000</b>
+          </div>
+
+          <div class="insight">
+            <p class="eyebrow">GROWTH INSIGHT</p>
+            <h3>Find your next opportunity</h3>
+
+            <p>
+              Ask VocaBiz to compare products or summarize your
+              sample sales.
+            </p>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- FOOTER -->
+      <footer>
+        VocaBiz · Independent hackathon project · Sample data only
+      </footer>
+
+    </main>
+  </div>
+
+  <!-- FRONTEND JAVASCRIPT -->
+  <script type="module" src="/script.js"></script>
+
+</body>
+</html>
